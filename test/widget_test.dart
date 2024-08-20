@@ -7,6 +7,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:pizza/app.dart';
+import 'package:pizza/app_view.dart';
 
 import 'package:pizza/main.dart';
 

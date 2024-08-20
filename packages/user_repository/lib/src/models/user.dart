@@ -10,26 +10,26 @@ class MyUser {
     required this.userId,
     required this.email,
     required this.name,
-    required this.hasActiveCart
+    required this.hasActiveCart,
   });
 
   static final empty = MyUser(
-      userId: '',
-      email: '',
-      name: '',
-      hasActiveCart: false
+    userId: '',
+    email: '',
+    name: '',
+    hasActiveCart: false,
   );
 
-  MyUserEntity toEntity(){
+  MyUserEntity toEntity() {
     return MyUserEntity(
-        userId: '',
-        email: '',
-        name: '',
-        hasActiveCart: hasActiveCart
+      userId: userId,
+      email: email,
+      name: name,
+      hasActiveCart: hasActiveCart,
     );
   }
 
-  static MyUser fromEntity(MyUserEntity entity){
+  static MyUser fromEntity(MyUserEntity entity) {
     return MyUser(
         userId: entity.userId,
         email: entity.email,
@@ -37,8 +37,9 @@ class MyUser {
         hasActiveCart: entity.hasActiveCart
     );
   }
+
   @override
-  String toString(){
-    return 'MyUser:  $userId, $email, $name, $hasActiveCart';
+  String toString() {
+    return 'MyUser: $userId, $email, $name, $hasActiveCart';
   }
 }

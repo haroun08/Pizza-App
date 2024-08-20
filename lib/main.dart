@@ -8,7 +8,15 @@ import 'app.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      projectId: 'pizza-delivery-f717b',
+      apiKey: 'AIzaSyD81qO-sWO8jantt47gsDVcnadK1Is4Sk0',
+      appId: '1:272879722715:android:b32d7174e31b58b78bacfe',
+      messagingSenderId: '272879722715',
+      storageBucket: 'pizza-delivery-f717b.appspot.com',
+    ),
+  );
   Bloc.observer = SimpleBlocObserver();
   runApp(MyApp(FirebaseUserRepo()));
 }
